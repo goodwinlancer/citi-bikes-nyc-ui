@@ -1,0 +1,27 @@
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+  text-align: center;
+}
+
+/*
+   src/styles.css (i.e. your global style)
+*/
+.dataTables_empty {
+  display: none;
+}
+
+.dataTables_filter input[type="search"]:focus {
+  border-color: #66a9bd;
+  outline: 5;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.dataTables_paginate {
+  border-color: #66a9bd;
+  outline: 5;
+  background: #66a9bd;
+}

@@ -1,0 +1,27 @@
+<div class="spinner" *ngIf="!isLoaded">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="display compact cell-border hover" style="width:100%">
+  <thead style="background: #ffffff;">
+    <tr>
+      <th style="text-align: left; width:20%">Name of the station</th>
+      <th style="text-align: left; width:30%">Address</th>
+      <th style="text-align: left; width:10%">Status</th>
+      <th style="text-align: right; width:10%">No. of docs</th>
+      <th style="text-align: right; width:15%">No. of docs available</th>
+      <th style="text-align: right; width:15%">No. of bikes available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let station of stations">
+      <td style="text-align: left;">{{ station.stationName }}</td>
+      <td style="text-align: left;">{{ station.stAddress1 }}</td>
+      <td style="text-align: left;">{{ station.statusValue }}</td>
+      <td style="text-align: right;">{{ station.totalDocks }}</td>
+      <td style="text-align: right;">{{ station.availableDocks }}</td>
+      <td style="text-align: right;">{{ station.availableBikes }}</td>
+    </tr>
+  </tbody>
+  </table>
